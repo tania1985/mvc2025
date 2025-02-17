@@ -6,15 +6,22 @@ class App{
 
     public function __construct(){
         $url=$this->parseUrl();
-        var_dump($url);
        
          // Verificar el controlador
-         if(file_exists('../app/controllers/' . ucfirst($url[0]) . 'Controller.php')) {
+         if(file_exists('./app/controllers/' . ucfirst($url[0]) . 'Controller.php')) {
             $this->controller = ucfirst($url[0]) . 'Controller';
             unset($url[0]);
         }
-        require_once '../app/controllers/' . $this->controller . '.php';
+        require_once './app/controllers/' . $this->controller . '.php';
         $this->controller = new $this->controller;
+
+         // Verificar el método
+         if(isset($url[1])) {
+            if(method_exists($this->controller, $url[1])) {
+                $this->method = $url[1];
+                unset($url[1]);
+            }
+        }
     }
     
 

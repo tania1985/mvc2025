@@ -6,7 +6,13 @@ class ActorController extends Controller{
         echo "hola desde index de ActorController";
     }
     public function new(...$params){
-        $this->view("new_actor");
+        if(isset($_POST["first_name"])){
+            var_dump($_POST);
+            exit();
+        }else{
+            $this->view("new_actor"); 
+        }
+       
     }
 
 }

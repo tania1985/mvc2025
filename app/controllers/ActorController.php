@@ -6,7 +6,7 @@ class ActorController extends Controller{
         echo "hola desde index de ActorController";
     }
     public function new(...$params){
-        $this->view("new_actor")
+        $this->view("new_actor");
     }
 
 }

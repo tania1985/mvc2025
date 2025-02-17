@@ -1,5 +1,6 @@
 <?php
-require_once("./core/Controller.php");
+namespace Formacom\controllers;
+use Formacom\Core\Controller;
 
 class ActorController extends Controller{
     public function index(...$params){

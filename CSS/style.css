@@ -1,0 +1,70 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+/* Contenedor para la lista de actores */
+.actor-list {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.actor-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.actor-list li {
+    padding: 12px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+    margin-bottom: 5px;
+}
+
+.actor-list li:last-child {
+    border-bottom: none;
+}
+
+/* Hover para los elementos de la lista */
+.actor-list li:hover {
+    background-color: #e9ecef;
+    cursor: pointer;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .actor-list {
+        width: 100%;
+        padding: 15px;
+    }
+}

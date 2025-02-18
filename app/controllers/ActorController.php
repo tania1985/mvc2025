@@ -7,7 +7,7 @@ class ActorController extends Controller{
     public function index(...$params){
         $actores = Actor::all();
         $this -> view ("actor_list",$actores);
-        echo "hola desde index de ActorController";
+        //echo "hola desde index de ActorController";
     }
     public function new(...$params){
         if(isset($_POST["first_name"])){
